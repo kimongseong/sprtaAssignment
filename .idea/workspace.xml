@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b978e3b-8b22-466f-8afc-a96379bb7106" name="Changes" comment="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/java/com/sparta/msa_exam/gateway/LocalJwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9b978e3b-8b22-466f-8afc-a96379bb7106" name="Changes" comment="auth 구현">
+      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/gateway/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/repository/ProductRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +102,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build auth.executor": "Run",
     "Gradle.Build gateway.executor": "Run",
     "Gradle.Build product.executor": "Run",
     "Gradle.Build server.executor": "Run",
@@ -117,11 +112,13 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AuthApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
     "Spring Boot.OrderApplication.executor": "Run",
     "Spring Boot.ProductApplication (1).executor": "Run",
     "Spring Boot.ProductApplication.executor": "Run",
     "Spring Boot.ServerApplication.executor": "Run",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -152,7 +149,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderApplication">
+  <component name="RunManager" selected="Spring Boot.AuthApplication">
     <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="auth.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.msa_exam.client.auth.AuthApplication" />
@@ -224,7 +221,7 @@
       <workItem from="1723168290077" duration="8300000" />
       <workItem from="1723179878127" duration="6000" />
       <workItem from="1723180140810" duration="23000" />
-      <workItem from="1723180180783" duration="4459000" />
+      <workItem from="1723180180783" duration="5941000" />
     </task>
     <task id="LOCAL-00001" summary="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱">
       <option name="closed" value="true" />
@@ -234,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723180395598</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="auth 구현">
+      <option name="closed" value="true" />
+      <created>1723188247847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723188247847</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +258,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱" />
-    <option name="LAST_COMMIT_MESSAGE" value="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱" />
+    <MESSAGE value="auth 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth 구현" />
   </component>
 </project>

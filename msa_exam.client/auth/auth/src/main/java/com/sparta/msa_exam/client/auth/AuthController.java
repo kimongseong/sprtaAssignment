@@ -26,14 +26,5 @@ public class AuthController {
         return ResponseEntity.ok(new AuthResponse(authService.createAccessToken(user_id)));
     }
 
-    /**
-     * JWT 액세스 토큰을 포함하는 응답 객체입니다.
-     */
-    @Data
-    @AllArgsConstructor
-    @NoArgsConstructor
-    static class AuthResponse {
-        private String access_token;
 
-    }
 }
