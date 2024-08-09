@@ -17,9 +17,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
 @RequiredArgsConstructor
-@Transactional
+@Service
 public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderProductRepository orderProductRepository;
@@ -29,6 +28,7 @@ public class OrderService {
         return productClient.getAllProducts();
     }
 
+    @Transactional
     public void createOrder(OrderRequestDto orderRequestDto) {
         Order order = new Order(orderRequestDto.getName());
 
@@ -75,6 +75,7 @@ public class OrderService {
         );
     }
 
+    @Transactional
     public OrderResponseDto updateOrder(long orderId, long productId) {
         Order order = findById(orderId);
         OrderProduct orderProduct = OrderProduct.createOrderProduct(order, productId);

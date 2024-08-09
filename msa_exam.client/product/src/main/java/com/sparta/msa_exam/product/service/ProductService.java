@@ -18,7 +18,10 @@ public class ProductService {
 
 
     public void createProducts(ProductRequestDto productRequestDto) {
+
+
         Product product = Product.addProduct(productRequestDto);
+
         productRepository.save(product);
     }
 
