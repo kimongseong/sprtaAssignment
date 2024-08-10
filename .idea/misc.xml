@@ -4,7 +4,9 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/msa_exam.client/auth" />
     <file type="web" url="file://$PROJECT_DIR$/msa_exam.client/gateway" />
+    <file type="web" url="file://$PROJECT_DIR$/msa_exam.client/order" />
     <file type="web" url="file://$PROJECT_DIR$/msa_exam.client/product" />
+    <file type="web" url="file://$PROJECT_DIR$/msa_exam/server" />
     <file type="web" url="file://D:/proj/sparta/msa_exam.client/auth" />
     <file type="web" url="file://D:/proj/sparta/msa_exam.client/demo" />
   </component>

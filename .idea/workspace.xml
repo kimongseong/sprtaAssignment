@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b978e3b-8b22-466f-8afc-a96379bb7106" name="Changes" comment="auth 구현">
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/gateway.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/product.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/order/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/order/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/order/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +111,10 @@
   "keyToString": {
     "Gradle.Build auth.executor": "Run",
     "Gradle.Build gateway.executor": "Run",
+    "Gradle.Build order.executor": "Run",
     "Gradle.Build product.executor": "Run",
     "Gradle.Build server.executor": "Run",
+    "Gradle.Tests in 'gateway'.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -122,13 +131,17 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/proj/sparta/msa_exam.client/auth",
+    "last_opened_file_path": "C:/Users/kim/Desktop/sprtaAssignment/msa_exam.client/order",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -149,7 +162,29 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthApplication">
+  <component name="RunManager" selected="Gradle.Tests in 'gateway'">
+    <configuration name="Tests in 'gateway'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/msa_exam.client/gateway" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="auth.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.msa_exam.client.auth.AuthApplication" />
@@ -194,6 +229,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.Tests in 'gateway'" />
       <item itemvalue="Spring Boot.AuthApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.OrderApplication" />
@@ -201,12 +237,17 @@
       <item itemvalue="Spring Boot.ProductApplication" />
       <item itemvalue="Spring Boot.ServerApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'gateway'" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18968.26" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18968.26" />
       </set>
     </attachedChunks>
   </component>
@@ -222,6 +263,9 @@
       <workItem from="1723179878127" duration="6000" />
       <workItem from="1723180140810" duration="23000" />
       <workItem from="1723180180783" duration="5941000" />
+      <workItem from="1723274838393" duration="38000" />
+      <workItem from="1723275120146" duration="1630000" />
+      <workItem from="1723277451162" duration="1726000" />
     </task>
     <task id="LOCAL-00001" summary="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱">
       <option name="closed" value="true" />
@@ -244,6 +288,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
