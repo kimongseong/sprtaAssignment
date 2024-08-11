@@ -1,4 +1,4 @@
-package com.sparta.msa_exam.client.auth;
+package com.sparta.msa_exam.client.auth.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

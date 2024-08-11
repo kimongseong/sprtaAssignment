@@ -4,20 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b978e3b-8b22-466f-8afc-a96379bb7106" name="Changes" comment="auth 구현">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/product.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/config/CacheConfig.java" afterDir="false" />
+    <list default="true" id="9b978e3b-8b22-466f-8afc-a96379bb7106" name="Changes" comment="product 캐싱 적용">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/auth.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/domain/UserRoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/dto/SignupRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/dto/signInRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/repository/AuthRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/order/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/order/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/order/src/main/java/com/sparta/msa_exam/order/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/order/src/main/java/com/sparta/msa_exam/order/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/dto/ProductResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/dto/ProductResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/java/com/sparta/msa_exam/product/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/product/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/config/AuthConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/dto/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/java/com/sparta/msa_exam/gateway/LocalJwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/java/com/sparta/msa_exam/gateway/LocalJwtAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +79,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -114,51 +120,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build auth.executor": "Run",
-    "Gradle.Build gateway.executor": "Run",
-    "Gradle.Build order.executor": "Run",
-    "Gradle.Build product.executor": "Run",
-    "Gradle.Build server.executor": "Run",
-    "Gradle.Tests in 'gateway'.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AuthApplication.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.OrderApplication.executor": "Run",
-    "Spring Boot.ProductApplication (1).executor": "Run",
-    "Spring Boot.ProductApplication.executor": "Run",
-    "Spring Boot.ServerApplication.executor": "Run",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kim/Desktop/sprtaAssignment/msa_exam.client/order",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build auth.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build order.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build product.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'gateway'.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AuthApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kim/Desktop/sprtaAssignment/msa_exam.client/order&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "redis"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;redis&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sparta.msa_exam.client.auth.dto" />
+      <recent name="com.sparta.msa_exam.client.auth.domain" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\proj\sparta\msa_exam.client" />
     </key>
@@ -253,7 +263,8 @@
       <workItem from="1723277451162" duration="1726000" />
       <workItem from="1723285532652" duration="77000" />
       <workItem from="1723285627527" duration="637000" />
-      <workItem from="1723286289698" duration="7263000" />
+      <workItem from="1723286289698" duration="7571000" />
+      <workItem from="1723347464630" duration="8650000" />
     </task>
     <task id="LOCAL-00001" summary="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱">
       <option name="closed" value="true" />
@@ -271,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723188247847</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="product 캐싱 적용">
+      <option name="closed" value="true" />
+      <created>1723293665180</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723293665180</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +313,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱" />
     <MESSAGE value="auth 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth 구현" />
+    <MESSAGE value="product 캐싱 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="product 캐싱 적용" />
   </component>
 </project>
