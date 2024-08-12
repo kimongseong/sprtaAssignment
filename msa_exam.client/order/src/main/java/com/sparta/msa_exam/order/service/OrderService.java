@@ -7,7 +7,6 @@ import com.sparta.msa_exam.order.dto.OrderResponseDto;
 import com.sparta.msa_exam.order.dto.OrderProductResponseDto;
 import com.sparta.msa_exam.order.dto.ProductResponseDto;
 import com.sparta.msa_exam.order.feign.ProductClient;
-import com.sparta.msa_exam.order.repository.OrderProductRepository;
 import com.sparta.msa_exam.order.repository.OrderRepository;
 import jakarta.ws.rs.NotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -15,52 +14,48 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
+
 
 @RequiredArgsConstructor
 @Service
 public class OrderService {
     private final OrderRepository orderRepository;
-    private final OrderProductRepository orderProductRepository;
     private final ProductClient productClient;
 
-    private List<ProductResponseDto> getAllProducts(){
+    // 모든 제품을 가져오는 메서드
+    private List<ProductResponseDto> getAllProducts() {
         return productClient.getAllProducts();
     }
-    private Order findById(Long orderId) {
-        return orderRepository.findById(orderId).orElseThrow(() -> new NotFoundException("Order not found"));
-    }
 
-    private OrderProductResponseDto toOrderProductResponseDto(OrderProduct orderProduct) {
-        return new OrderProductResponseDto(
-                orderProduct.getProductId()
-        );
-    }
-
-    public OrderResponseDto getOrder(long orderId) {
-        return toOrderResponseDto(findById(orderId));
-    }
-    @Transactional
-    public void createOrder(OrderRequestDto orderRequestDto) {
-        Order order = new Order(orderRequestDto.getName());
-
-        List<ProductResponseDto> products = getAllProducts();
-        List<Long> validProductIds = products.stream()
+    // 유효한 제품 ID 집합을 가져오는 메서드
+    private Set<Long> getValidProductIds() {
+        return getAllProducts().stream()
                 .map(ProductResponseDto::getProductId)
-                .toList();
+                .collect(Collectors.toSet());
+    }
 
-        for (Long productId : orderRequestDto.getProductIds()) {
-            if (!validProductIds.contains(productId)) {
-                throw new NullPointerException("Product not found: " + productId);
-            }
-            OrderProduct orderProduct = OrderProduct.createOrderProduct(order, productId);
-            order.addOrderProduct(orderProduct);
+    // 제품 ID 유효성 검증
+    private void validateProductIds(List<Long> productIds) {
+        Set<Long> validProductIds = getValidProductIds();
+        List<Long> invalidProductIds = productIds.stream()
+                .filter(productId -> !validProductIds.contains(productId))
+                .collect(Collectors.toList());
+
+        if (!invalidProductIds.isEmpty()) {
+            throw new IllegalArgumentException("다음 제품이 존재하지 않습니다: " + invalidProductIds);
         }
+    }
 
-        orderRepository.save(order);
+    // 주문 ID로 주문 찾기
+    private Order findById(Long orderId) {
+        return orderRepository.findById(orderId)
+                .orElseThrow(() -> new NotFoundException("주문 ID " + orderId + "를 찾을 수 없습니다"));
     }
 
 
+    // Order를 OrderResponseDto로 변환
     private OrderResponseDto toOrderResponseDto(Order order) {
         List<OrderProductResponseDto> orderProductDtos = order.getOrderProducts().stream()
                 .map(this::toOrderProductResponseDto)
@@ -72,16 +67,42 @@ public class OrderService {
                 orderProductDtos
         );
     }
+    // OrderProduct를 OrderProductResponseDto로 변환
+    private OrderProductResponseDto toOrderProductResponseDto(OrderProduct orderProduct) {
+        return new OrderProductResponseDto(orderProduct.getProductId());
+    }
 
-    @Transactional
-    public OrderResponseDto updateOrder(long orderId, long productId) {
+    // 주문 조회
+    public OrderResponseDto getOrder(long orderId) {
         Order order = findById(orderId);
-        OrderProduct orderProduct = OrderProduct.createOrderProduct(order, productId);
-        orderProductRepository.save(orderProduct);
         return toOrderResponseDto(order);
     }
 
+    // 주문 생성
+    @Transactional
+    public void createOrder(OrderRequestDto orderRequestDto) {
+        validateProductIds(orderRequestDto.getProductIds());
 
+        Order order = new Order(orderRequestDto.getName());
+        for (Long productId : orderRequestDto.getProductIds()) {
+            OrderProduct orderProduct = OrderProduct.createOrderProduct(order, productId);
+            order.addOrderProduct(orderProduct);
+        }
 
+        orderRepository.save(order);
+    }
 
+    // 주문 업데이트
+    @Transactional
+    public OrderResponseDto updateOrder(long orderId, long productId) {
+        Order order = findById(orderId);
+        validateProductIds(List.of(productId));
+
+        OrderProduct orderProduct = OrderProduct.createOrderProduct(order, productId);
+        order.addOrderProduct(orderProduct);
+
+        orderRepository.save(order);
+
+        return toOrderResponseDto(order);
+    }
 }
