@@ -41,7 +41,7 @@ public class OrderService {
         Set<Long> validProductIds = getValidProductIds();
         List<Long> invalidProductIds = productIds.stream()
                 .filter(productId -> !validProductIds.contains(productId))
-                .collect(Collectors.toList());
+                .toList();
 
         if (!invalidProductIds.isEmpty()) {
             throw new IllegalArgumentException("다음 제품이 존재하지 않습니다: " + invalidProductIds);
