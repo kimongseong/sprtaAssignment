@@ -48,7 +48,7 @@ public class OrderService {
         orderRepository.save(order);
     }
 
-    @Transactional(readOnly = true)
+
     protected Order findById(Long orderId) {
         return orderRepository.findById(orderId).orElseThrow(() -> new NotFoundException("Order not found"));
     }
