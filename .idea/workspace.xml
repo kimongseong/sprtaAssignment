@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b978e3b-8b22-466f-8afc-a96379bb7106" name="Changes" comment="product 캐싱 적용">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/auth.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/domain/UserRoleEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/dto/SignupRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/dto/signInRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/repository/AuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="9b978e3b-8b22-466f-8afc-a96379bb7106" name="Changes" comment="회원가입 , 로그인 적용적용">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/config/AuthConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/dto/AuthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/java/com/sparta/msa_exam/client/auth/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/auth/auth/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/java/com/sparta/msa_exam/gateway/LocalJwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/gateway/src/main/java/com/sparta/msa_exam/gateway/LocalJwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/order/src/main/java/com/sparta/msa_exam/order/dto/ProductResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/order/src/main/java/com/sparta/msa_exam/order/dto/ProductResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa_exam.client/order/src/main/java/com/sparta/msa_exam/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_exam.client/order/src/main/java/com/sparta/msa_exam/order/service/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +249,9 @@
       <workItem from="1723285532652" duration="77000" />
       <workItem from="1723285627527" duration="637000" />
       <workItem from="1723286289698" duration="7571000" />
-      <workItem from="1723347464630" duration="8650000" />
+      <workItem from="1723347464630" duration="13763000" />
+      <workItem from="1723424182980" duration="35000" />
+      <workItem from="1723429985771" duration="1975000" />
     </task>
     <task id="LOCAL-00001" summary="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱">
       <option name="closed" value="true" />
@@ -290,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723293665180</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="회원가입 , 로그인 적용적용">
+      <option name="closed" value="true" />
+      <created>1723356465776</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723356465776</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +309,7 @@
     <MESSAGE value="GW 추가 ,Product 라운드로빈 형식으로 로드밸런싱" />
     <MESSAGE value="auth 구현" />
     <MESSAGE value="product 캐싱 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="product 캐싱 적용" />
+    <MESSAGE value="회원가입 , 로그인 적용적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 , 로그인 적용적용" />
   </component>
 </project>

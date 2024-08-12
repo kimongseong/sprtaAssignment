@@ -14,6 +14,4 @@ public class ProductResponseDto {
 
     private int supply_price;
 
-
-
 }

@@ -53,10 +53,6 @@ public class OrderService {
         return orderRepository.findById(orderId).orElseThrow(() -> new NotFoundException("Order not found"));
     }
 
-    public OrderResponseDto getOrder(long orderId) {
-        return toOrderResponseDto(findById(orderId));
-    }
-
     private OrderResponseDto toOrderResponseDto(Order order) {
         List<OrderProductResponseDto> orderProductDtos = order.getOrderProducts().stream()
                 .map(this::toOrderProductResponseDto)
@@ -80,6 +76,10 @@ public class OrderService {
         Order order = findById(orderId);
         OrderProduct orderProduct = OrderProduct.createOrderProduct(order, productId);
         orderProductRepository.save(orderProduct);
-        return getOrder(order.getOrderId());
+        return toOrderResponseDto(order);
+    }
+
+    public OrderResponseDto getOrder(long orderId) {
+        return toOrderResponseDto(findById(orderId));
     }
 }
