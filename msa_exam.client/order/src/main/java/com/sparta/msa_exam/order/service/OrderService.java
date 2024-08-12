@@ -24,10 +24,22 @@ public class OrderService {
     private final OrderProductRepository orderProductRepository;
     private final ProductClient productClient;
 
-    public List<ProductResponseDto> getAllProducts(){
+    private List<ProductResponseDto> getAllProducts(){
         return productClient.getAllProducts();
     }
+    private Order findById(Long orderId) {
+        return orderRepository.findById(orderId).orElseThrow(() -> new NotFoundException("Order not found"));
+    }
 
+    private OrderProductResponseDto toOrderProductResponseDto(OrderProduct orderProduct) {
+        return new OrderProductResponseDto(
+                orderProduct.getProductId()
+        );
+    }
+
+    public OrderResponseDto getOrder(long orderId) {
+        return toOrderResponseDto(findById(orderId));
+    }
     @Transactional
     public void createOrder(OrderRequestDto orderRequestDto) {
         Order order = new Order(orderRequestDto.getName());
@@ -49,10 +61,6 @@ public class OrderService {
     }
 
 
-    protected Order findById(Long orderId) {
-        return orderRepository.findById(orderId).orElseThrow(() -> new NotFoundException("Order not found"));
-    }
-
     private OrderResponseDto toOrderResponseDto(Order order) {
         List<OrderProductResponseDto> orderProductDtos = order.getOrderProducts().stream()
                 .map(this::toOrderProductResponseDto)
@@ -65,12 +73,6 @@ public class OrderService {
         );
     }
 
-    private OrderProductResponseDto toOrderProductResponseDto(OrderProduct orderProduct) {
-        return new OrderProductResponseDto(
-                orderProduct.getProductId()
-        );
-    }
-
     @Transactional
     public OrderResponseDto updateOrder(long orderId, long productId) {
         Order order = findById(orderId);
@@ -79,7 +81,7 @@ public class OrderService {
         return toOrderResponseDto(order);
     }
 
-    public OrderResponseDto getOrder(long orderId) {
-        return toOrderResponseDto(findById(orderId));
-    }
+
+
+
 }
